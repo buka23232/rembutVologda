@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>РЕМБЫТ-МАСТЕР</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="btn-up btn-up_hide" alt="ВВЕРХ"></div>
+
+  <div id="callback" class="callback">
+    <div class="wrapper_callback"> 
+      <h3>ЗАКАЗАТЬ ЗВОНОК</h3>
+      <button class="closes" onclick="ShowHide('callback');">X</button>
+      <form class="modal__form">
+        <input class="modal__input" type="text" name="name" placeholder="Представьтесь" required/>
+        <input class="modal__input" type="text" name="phone" placeholder="Ваш телефон" required/>
+        <input type="submit" value="Отправить" onclick="ShowHide('callbacks');"/>
+      </form>
+    </div>
+  </div>
+
+  <div id="callbacks" class="callback">
+    <div class="wrapper_callback"> 
+      <h3 class="callback__title">Cпасибо, ваша заявка принята!<br> Мы с вами свяжемся в ближайшее время.</h3>
+      <form class="modal__form">
+        <input type="submit" value="Вернуться обратно" onclick="ShowHide('callback');"/>
+      </form>
+    </div>
+  </div>
+
+  <section class="checkbox__menu-mobal">
+    <h1 class="checkbox__menus-logos">РЕМБЫТ-МАСТЕР</h1>
+    <input type="checkbox" id="active">
+        <ul class="checkbox__menus" id="navbar">
+          <h1 class="checkbox__menus-logo">РЕМБЫТ-МАСТЕР</h1>
+          <li><a class="checkbox__menus-item" href="#">Главная</a></li>
+          <li><a class="checkbox__menus-item" href="#anchor">Услуги</a></li>
+          <li><a class="checkbox__menus-item" href="#anchorq">Как мы работаем</a></li>
+          <li><a class="checkbox__menus-item" href="#onas">О нас</a></li>
+          <li><a class="checkbox__menus-item" href="#contats">Контакты</a></li>
+          <li><a class="checkbox__menus-zvonok" onclick="ShowHide('callback');">Заказать звонок</a></li>
+        </ul>
+      <label for="active" class="menu-btn"><span></span></label>
+      <label for="active" class="close"></label>
+      <div class="wrapper">
+        <ul class="checkbox__menu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#anchor">Услуги</a></li>
+          <li><a class="checkbox__menus-item" href="#anchorq">Как мы работаем</a></li>
+          <li><a href="#onas">О нас</a></li>
+          <li><a href="#contats">Контакты</a></li>
+          <li><a class="checkbox__menus-zvonok" onclick="ShowHide('callback');">Заказать звонок</a></li>
+        </ul>
+      </div>
+  </section>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="header__logo" href="index.html">
+          <img class="header__img" src="img/header/header1.png">
+        </a>
+        <div class="header__info">
+          <p class="header__info-text">
+            Ремонт бытовой техники<br>
+            Вологда.
+          </p>
+        </div>
+        <div class="header__time">
+          <img class="time" src="img/header/header2.png">
+          <p class="header__time-text">10:00-23:00</p>
+        </div>
+        <div class="header__adress">
+          <img class="header__adress-img" src="img/header/header3.png">
+          <p class="header__adress-text">
+            г. Вологда,<br>
+            улица Марии<br> Ульяновой.
+          </p>
+        </div>
+        <div class="header__button">
+          <a class="header__btn" href="tel:89115010076">Свяжитесь со мной</a>
+        </div>
+        <div class="header__phone">
+          <p class="header__phone__text">
+            8 911 501-00-76<br>
+            8 8172 50-00-76
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="header__slider">
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img class="slideshow-container-img" src="img/slider/slider1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img class="slideshow-container-img" src="img/slider/slider2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img class="slideshow-container-img" src="img/slider/slider3.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </section>
+  <main class="main">
+    <section class="uslugi" id="anchor">
+    <div class="container">
+      <h2 class="uslugi__title">
+        ОБРАТИВШИСЬ В НАШ СЕРВИС ВЫ ПОЛУЧАЕТЕ
+      </h2>
+      <div class="uslugi__inner">
+
+        <div class="uslugi__box">
+          <img class="uslugi__box-img" src="img/uslugi/uslugi1.jpg">
+          <h1 class="uslugi__box-title">Ежедневно</h1>
+          <p class="uslugi__box-text">
+            Работаем ежедневно, даже в выходные и праздники
+          </p>
+        </div>
+
+        <div class="uslugi__box">
+          <img class="uslugi__box-img" src="img/uslugi/uslugi2.png">
+          <h1 class="uslugi__box-title">Удобство</h1>
+          <p class="uslugi__box-text">
+            Ремонт проводим на дому в присутствии владельца
+          </p>
+        </div>
+
+        <div class="uslugi__box">
+          <img class="uslugi__box-img" src="img/uslugi/uslugi3.jpg">
+          <h1 class="uslugi__box-title">Бесплатно</h1>
+          <p class="uslugi__box-text">
+            Бесплатный выезд на дом и диагностика (в случае ремонта)
+          </p>
+        </div>
+
+        <div class="uslugi__box">
+          <img class="uslugi__box-img" src="img/uslugi/uslugi4.jpg">
+          <h1 class="uslugi__box-title">Гарантия</h1>
+          <p class="uslugi__box-text">
+            Гарантия на все виды работ до 12 месяцев
+          </p>
+        </div>
+
+        <div class="uslugi__box">
+          <img class="uslugi__box-img" src="img/uslugi/uslugi5.jpg">
+          <h1 class="uslugi__box-title">Квалификация</h1>
+          <p class="uslugi__box-text">
+            Квалифицированные специалисты с опытом 
+          </p>
+        </div>
+
+        <div class="uslugi__box">
+          <img class="uslugi__box-img" src="img/uslugi/uslugi6.jpg">
+          <h1 class="uslugi__box-title">Контроль</h1>
+          <p class="uslugi__box-text">
+            Контроль качества на каждом этапе работ
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <section class="part">
+      <div class="container">
+        <h1 class="part__title">Мы ремонтируем</h1>
+        <div class="part__inner">
+          <div class="part__block-img">
+            <img class="part__img" src="img/part/part1.jpg">
+          </div>
+          <div class="part__block-logo">
+            <h1 class="part__block-logo-title">Старые и новые модели</h1>
+            <p class="part__block-logo-text">
+              AEG * Airhot * Akira * Ardesia * Ardo * Asko * Atlanta * Avex * Bbk * BOSCH * Bartscher * Bauknecht * Beko * Bompani * BORK * Brandt * Breville * CANDY * Caso * Cata * Centek * DAEWOO Electronics * Delta * DeLonghi * Dexp * ELECTROLUX * Erisson * Fagor * First * Fimar * Fusion * Gemlux * GORENJE * Horizont * HANSA * Hermes Technics * Hotpoint-Ariston * Hyundai * INDESIT* Kuppersberg * KAISER * Kitchen Aid * Korting * LG * Leran * Midea * Mystery * Master Cook * MIELE * Menumaster * MOULINEX * Neff * Olto * Orion * Oursson * PANASONIC * Philips * Polaris * Profi Cook * Redmond * Rolsen * SAMSUNG * Saturn * Scarlett * Schaub Lorenz * SHARP * Shivaki * Sinbo * Starwind * Steba * Supra * SIEMENS * Tesler * Tristar * Techno * TOSHIBA * Vasko * Vitek * Viking * Wellton * Weissgauff * WHIRLPOOL * Zarget * ZANUSSI
+            </p>
+          </div>
+        </div>
+        <h1 class="part__title-table">Цены на работы нашего сервиса</h1>
+        <div class="part__table">
+          <table>
+          <tr>
+            <th style="width: 600px; border: 2px solid #ccc; background: #e5e5e1;">Наименование ремонта</th>
+            <th style="width: 600px; border: 2px solid #ccc; background: #e5e5e1;">Цены за вид ремонта</th>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Выезд мастера </td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">бесплатно*</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Диагностика </td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">бесплатно*</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Ремонт окна волновода</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">450 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена панели управления, или мембраны управления</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1220 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена высоковольтного предохранителя, или диода</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">970 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена/ремонт магнетрона или замена конденсатора</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1090 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена силового трансформатора</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1120 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена защитной пластины окна волновода</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">960 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Установка электронного блока управления</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1140 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Ремонт электронного блока управления</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1750 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена температурного сенсора</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">990 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена нагревателя (ТЭНа)</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1170 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена/ремонт двигателя поддона</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1100 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена колпачка магнетрона</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">510 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена таймера или переключателя режимов</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1190 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Ремонт таймера или переключателя режимов, доработка узла</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1390 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена / ремонт дверцы, защелки дверцы</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1220 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Ремонт электросхемы</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1490 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена / ремонт вентилятора</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1190 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Доработка узлов и деталей</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1180 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Извлечение печи из мебели, стойки т.п.</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">500 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена стекла дверцы</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1640 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Техническое обслуживание</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1490 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Чистка от насекомых</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1750 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Регулировка двери, контактов блокировки включения</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1230 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Разборка-сборка печи</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">500 р.</td>
+          </tr>
+          <tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Замена / ремонт муфты вращения поддона</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1090 р.</td>
+          </tr>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">Ремонт механизма открывания двери или механизма блокировки двери</td>
+            <td style="width: 600px; border: 2px solid #ccc; text-align: center;">1550 р.</td>
+          </tr>
+        </table>
+        </div>  
+      </div>
+    </section>
+    <section class="opit" id="anchorq">
+      <div class="container">
+        <h1 class="opit__title">Как мы работаем?</h1>
+        <div class="opit__inner">
+
+          <div class="opit__item">
+            <img class="opit__item-img" src="img/opit/opit1.png">
+            <p class="opit__item-text">
+              Вы оставляете заявку
+            </p>
+          </div>
+
+          <div class="opit__item">
+            <img class="opit__item-img" src="img/opit/opit2.png">
+            <p class="opit__item-text">
+              Консультация по телефону мастера
+            </p>
+          </div>
+
+          <div class="opit__item">
+            <img class="opit__item-img" src="img/opit/opit3.png">
+            <p class="opit__item-text">
+              Предварительная оценка стоимости работ
+            </p>
+          </div>
+
+          <div class="opit__item">
+            <img class="opit__item-img" src="img/opit/opit4.png">
+            <p class="opit__item-text">
+              Выезд специалиста: диагностика неисправностей
+            </p>
+          </div>
+
+          <div class="opit__item">
+            <img class="opit__item-img" src="img/opit/opit5.png">
+            <p class="opit__item-text">
+              Проведение работ
+            </p>
+          </div>
+
+        </div>
+        <h2 class="opit__subtille">
+          Распространенные поломки
+        </h2>
+        <div class="opit__row">
+
+          <div class="opit__row-item">
+            <div class="opit__row-item-list">
+              <div class="opit__row-item-logo">
+                <img class="opit__row-item-img" src="img/opit/opit6.jpg">
+              </div>
+              <div class="opit__row-item-info">
+                <h1 class="opit__row-item-title">
+                Искрит / дымит внутри</h1>
+                <a class="opit__row-item-btn" href="tel:89115010076">
+                  Узнать стоимость
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="opit__row-item">
+            <div class="opit__row-item-list">
+              <div class="opit__row-item-logo">
+                <img class="opit__row-item-img" src="img/opit/opit7.jpg">
+              </div>
+              <div class="opit__row-item-info">
+                <h1 class="opit__row-item-title">
+                Работает, но не греет</h1>
+                <a class="opit__row-item-btn" href="tel:89115010076">
+                  Узнать стоимость
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="opit__row-item">
+            <div class="opit__row-item-list">
+              <div class="opit__row-item-logo">
+                <img class="opit__row-item-img" src="img/opit/opit8.jpg">
+              </div>
+              <div class="opit__row-item-info">
+                <h1 class="opit__row-item-title">
+                Отключается при запуске<br> через несколько секунд</h1>
+                <a class="opit__row-item-btn" href="tel:89115010076">
+                  Узнать стоимость
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="opit__row-item">
+            <div class="opit__row-item-list">
+              <div class="opit__row-item-logo">
+                <img class="opit__row-item-img" src="img/opit/opit9.jpg">
+              </div>
+              <div class="opit__row-item-info">
+                <h1 class="opit__row-item-title">
+                Неравномерно<br> прогревает пищу</h1>
+                <a class="opit__row-item-btn" href="tel:89115010076">
+                  Узнать стоимость
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="information" id="onas">
+      <div class="container">
+        <div class="information__inner">
+          <h1 class="information__title">О компании</h1>
+          <p class="information__text">
+            Компания "РЕМБЫТ-МАСТЕР" ВОЛОГДА" занимается ремонтом бытовой техники с 2009 года. За эти годы мы многого достигли: отобрали лучших мастеров, научились быстро решать любые проблемы и построили качественный сервис, ориентированный на комфорт клиента и качественное выполнение работ.
+            Мастер приедет к вам в день заказа. Специалист осмотрит поломку, скажет причину и стоимость ремонта.
+            Все работы проводятся опытными мастерами, которые прошли тщательный отбор. Они в совершенстве знакомы с устройством техники любого производителя. Наши мастера вежливы и аккуратны - специалист приезжает в удобное вам время, привозит все необходимые инструменты с собой, работает без лишнего шума и не оставляет после себя мусора. Мы делаем все, чтобы наши клиенты не чувствовали дискомфорта.
+
+            Все мастера постоянно повышают квалификацию. Поэтому мы можем починить и старую технику и последние новинки.
+
+            Мы уверены в своих специалистах и несем за них ответственность. "РЕМБЫТ-МАСТЕР" ВОЛОГДА" дорожит своей репутацией. На все виды работ предоставляется официальная гарантия
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="card" id="contats">
+      <div class="card__inner">
+        <div class="container">
+          <h1 class="card__title">Наши контакты</h1>
+          <div class="card__row">
+            <div class="header__info">
+              <p class="header__info-text header__info-text-card">
+                Ремонт бытовой техники<br>
+                Вологда.
+              </p>
+            </div>
+            <div class="header__time">
+              <img class="time" src="img/header/header2.png">
+              <p class="header__time-text header__time-text-card">10:00-23:00</p>
+            </div>
+            <div class="header__adress">
+              <img class="header__adress-img" src="img/header/header3.png">
+              <p class="header__adress-text header__adress-text-card">
+                г. Вологда,<br>
+                улица Марии<br> Ульяновой.
+              </p>
+            </div>
+            <div class="header__phone">
+              <p class="header__phone__text header__phone__text-card">
+                8 911 501-00-76<br>
+                8 8172 50-00-76
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card__information">
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/21/vologda/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Вологда</a><a href="https://yandex.ru/maps/21/vologda/geo/ulitsa_marii_ulyanovoy/8034807/?from=tabbar&ll=39.891786%2C59.220231&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=18.63" style="color:#eee;font-size:12px;position:absolute;top:14px;">улица Марии Ульяновой</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUZbWhJxA" width="100%" height="350" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer___inner">
+          <div class="footer__box">
+            <img class="header__img" src="img/header/header1.png">
+            <p class="footer__text">
+              Ремонт бытовой техники Вологда.
+            </p>
+            <p class="footer__subtext">© 2000-2022 Все права защищены</p>
+          </div>
+          <div class="footer__menu-flex">
+            <ul class="footer__menu footer__menu-rigth">
+              <h1 class="footer__menu-title">
+                Клиентам
+              </h1>
+              <li class="footer__menu-link">
+                <a class="footer__menu-item" href="#">О компании</a>
+              </li>
+              <li class="footer__menu-link">
+                <a class="footer__menu-item" href="#">Услуги</a>
+              </li>
+              <li class="footer__menu-link">
+                <a class="footer__menu-item" href="#">Наши работы</a>
+              </li>
+              <li class="footer__menu-link">
+                <a class="footer__menu-item" href="#">Вид техники</a>
+              </li>
+              <li class="footer__menu-link">
+                <a class="footer__menu-item" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer__menu">
+            <h1 class="footer__menu-title">
+              Услуги
+            </h1>
+            <li class="footer__menu-link">
+              <a class="footer__menu-item" href="#">Ремонт стиральных машин</a>
+            </li>
+            <li class="footer__menu-link">
+              <a class="footer__menu-item" href="#">Ремонт посудомоечных машин</a>
+            </li>
+            <li class="footer__menu-link">
+              <a class="footer__menu-item" href="#">Ремонт электроплит</a>
+            </li>
+            <li class="footer__menu-link">
+              <a class="footer__menu-item" href="#">Ремонт холодильников<br>груза</a>
+            </li>
+            <li class="footer__menu-link">
+              <a class="footer__menu-item" href="#">Ремонт СВЧ печей</a>
+            </li>
+            <li class="footer__menu-link">
+              <a class="footer__menu-item" href="#">Ремонт пылесосов</a>
+            </li>
+          </ul>
+
+          <div class="footer__social-box">
+            <a class="footer__social-btn" href="tel:89115010076">Свяжитесь со мной</a>
+            <ul class="footer__social">
+              <a href="#" class="footer__social-link">
+                <img class="footer__social-img" src="img/footer/footer2.png">
+              </a>
+              <a href="#" class="footer__social-link">
+                <img class="footer__social-img" src="img/footer/footer3.png">
+              </a>
+              <a href="#" class="footer__social-link">
+                <img class="footer__social-img" src="img/footer/footer4.png">
+              </a>
+            </ul> 
+          </div>
+
+          <ul class="footer__menu-phone">
+            <h1 class="footer__menu-title footer__menu-title-phone">
+              Контакты
+            </h1>
+            <li class="footer__menu-link">
+              <a class="footer__menu-phone" href="tel:+74999299666">
+              89115010076</a>
+            </li>
+            <li class="footer__menu-link">
+              <a class="footer__menu-phone" href="tel:+79853645518">
+              500-076</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/examples/libs/ui-components/itc-slider/itc-slider.js" defer></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
